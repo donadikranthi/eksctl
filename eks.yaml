@@ -7,7 +7,7 @@ metadata:
 
 managedNodeGroups:
   - name: ng-1
-    instanceType: t3.micro
+    instanceType: t3.small
     desiredCapacity: 2
     minSize: 1
-    maxSize: 3
+    maxSize: 2
