@@ -3,9 +3,11 @@ kind: ClusterConfig
 
 metadata:
   name: roboshop-dev
-  region: us-east-01
+  region: us-east-1
+
 managedNodeGroups:
-  -name: roboshop-dev
-  instanceTypes: ["m5.large", "c3.large","c4.large","c5.large"]
-  desiredCapacity: 2 #  by default this value is 3
-  spot: true
+  - name: ng-1
+    instanceType: t3.micro
+    desiredCapacity: 2
+    minSize: 1
+    maxSize: 3
