@@ -6,11 +6,14 @@ metadata:
   region: us-east-1
 
 managedNodeGroups:
-  - name: ng-1
-    instanceType: t3.medium
-    desiredCapacity: 3
-    minSize: 1
-    maxSize: 2
+  - name: roboshop-dev-ng
+    instanceTypes:
+      - m5.large
+      - c3.large
+      - c4.large
+      - c5.large
+    desiredCapacity: 3   # default is 2 if not specified
+    spot: true
 
 
 # apiVersion: eksctl.io/v1alpha5
