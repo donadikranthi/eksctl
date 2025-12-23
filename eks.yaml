@@ -1,12 +1,17 @@
-eksctl create cluster \
-  --name roboshop-dev \
-  --region us-east-1 \
-  --nodegroup-name ng-1 \
-  --node-type t3.medium \
-  --nodes 2 \
-  --nodes-min 1 \
-  --nodes-max 3 \
-  --managed
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: roboshop-dev
+  region: us-east-1
+
+managedNodeGroups:
+  - name: ng-1
+    instanceType: t3.medium
+    desiredCapacity: 3
+    minSize: 1
+    maxSize: 2
+
 
 # apiVersion: eksctl.io/v1alpha5
 # kind: ClusterConfig
