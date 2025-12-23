@@ -12,7 +12,7 @@ managedNodeGroups:
       - c3.large
       - c4.large
       - c5.large
-    desiredCapacity: 3   # default is 2 if not specified
+    desiredCapacity: 3   # default is 3 if not specified
     spot: true
 
 
