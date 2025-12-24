@@ -8,7 +8,4 @@ managedNodeGroups:
   - name: roboshop-dev
     instanceTypes: ["m5.large", "t3.small", "t3.medium", "c5.large"]
     desiredCapacity: 2 #  by default this value is 3
-    spot: true   # enable spot instances
-    ssh:
-      allow: true
-      publicKeyPath: ~/.ssh/id_rsa.pub
+    spot: true   
